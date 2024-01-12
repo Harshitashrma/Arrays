@@ -1,0 +1,23 @@
+ int countVowels(string str,int s,int e)
+    {
+        int count=0;
+        for(int i=s;i<=e;i++)
+        {
+            if(str[i]=='a'||str[i]=='e'||str[i]=='i'||str[i]=='o'||str[i]=='u'||str[i]=='A'||str[i]=='E'||str[i]=='I'||str[i]=='O'||str[i]=='U')
+            count++;
+        }
+        return count;
+    }
+    bool halvesAreAlike(string s) {
+        int n = s.length();
+        int mid=n/2;
+
+        int fh=countVowels(s,0,mid-1);
+        int sh=countVowels(s,mid,n-1);
+
+        if(fh==sh)
+        return true;
+
+        return false;
+
+    }
